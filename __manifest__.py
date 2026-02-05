@@ -1,5 +1,5 @@
 {
-    'name': 'Runia Kode Unik Bayar',
+    'name': 'Runia Kode Unik Bayar (Odoo 17)',
     'version': '17.0.1.0.0',
     'summary': 'Add unique code to Sales Order and Invoice lines for payment identification',
     'category': 'Accounting/Payment',

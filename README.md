@@ -1,5 +1,5 @@
-# Runia Kode Unik Bayar 🪙
-**Automatic Unique Payment Code for Odoo Sales & eCommerce**
+# Runia Kode Unik Bayar 🪙 (Odoo 17)
+**Automatic Unique Payment Code for Odoo 17 Sales & eCommerce**
 
 ---
 
