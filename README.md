@@ -1,6 +1,6 @@
 # Runia Kode Unik Bayar 🪙 (Odoo 17)
 
-[English] | [Bahasa Indonesia]
+[[English]](#english) | [[Bahasa Indonesia]](#indonesia)
 
 ---
 
