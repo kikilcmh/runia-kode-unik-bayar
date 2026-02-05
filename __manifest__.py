@@ -1,0 +1,20 @@
+{
+    'name': 'Runia Kode Unik Bayar',
+    'version': '17.0.1.0.0',
+    'summary': 'Add unique code to Sales Order and Invoice lines for payment identification',
+    'category': 'Accounting/Payment',
+    'author': 'Runia',
+    'depends': ['sale', 'account', 'sale_management', 'website_sale'],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/product_data.xml',
+        'views/res_config_settings_views.xml',
+        'views/sale_order_views.xml',
+        'views/account_move_views.xml',
+        'views/website_sale_templates.xml',
+        'views/report_templates.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'license': 'LGPL-3',
+}

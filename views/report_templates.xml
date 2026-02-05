@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Invoice PDF Inheritance -->
+    <template id="report_invoice_document_inherit_unique_code" inherit_id="account.report_invoice_document">
+        <!-- Hide Unique Code from the lines table -->
+        <xpath expr="//table[contains(@class, 'o_main_table')]/tbody//tr" position="attributes">
+            <attribute name="t-if">line.display_type or line.product_id != env.ref('runia_kode_unik_bayar.product_product_kode_unik', False)</attribute>
+        </xpath>
+    </template>
+
+    <!-- Sales Order PDF Inheritance -->
+    <template id="report_saleorder_document_inherit_unique_code" inherit_id="sale.report_saleorder_document">
+        <!-- Hide Unique Code from the lines table -->
+        <xpath expr="//table[contains(@class, 'o_main_table')]/tbody//tr" position="attributes">
+            <attribute name="t-if">line.display_type or line.product_id != env.ref('runia_kode_unik_bayar.product_product_kode_unik', False)</attribute>
+        </xpath>
+    </template>
+</odoo>

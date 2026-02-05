@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="total_inherit_unique_code" inherit_id="website_sale.total">
+        <!-- 1. Adjust the Subtotal display to EXCLUDE unique code -->
+        <xpath expr="//tr[@id='order_total_untaxed']//span[@t-field='website_sale_order.amount_untaxed']" position="attributes">
+            <attribute name="t-field">website_sale_order.amount_untaxed_without_unique_code</attribute>
+        </xpath>
+
+        <!-- 2. Add the Kode Unik row before the Taxes -->
+        <xpath expr="//tr[@id='order_total_taxes']" position="before">
+            <tr id="order_total_unique_code" t-if="website_sale_order.amount_unique_code > 0">
+                <td colspan="2" class="text-muted border-0 ps-0 pt-0 pb-3">Kode Unik</td>
+                <td class="text-end border-0 pe-0 pt-0 pb-3">
+                    <span t-field="website_sale_order.amount_unique_code" t-options='{"widget": "monetary", "display_currency": website_sale_order.currency_id}'/>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+</odoo>
